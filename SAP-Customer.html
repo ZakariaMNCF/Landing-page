@@ -7,16 +7,62 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
-        .upload-section {
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
             margin-bottom: 20px;
         }
-        .upload-section input {
-            margin-bottom: 10px;
+        h2 {
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        .upload-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 8px;
+        }
+        .upload-section input[type="file"] {
+            display: block;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 2px dashed #3498db;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .upload-section button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .upload-section button:hover {
+            background-color: #2980b9;
         }
         .file-list {
             margin-top: 20px;
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 8px;
         }
         .file-list ul {
             list-style-type: none;
@@ -24,25 +70,39 @@
         }
         .file-list ul li {
             margin: 10px 0;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .file-list ul li a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .file-list ul li a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>SAP - Customer Contact</h1>
+    <div class="container">
+        <h1>SAP - Customer Contact</h1>
 
-    <!-- Upload Section -->
-    <div class="upload-section">
-        <h2>Upload PDF or Video</h2>
-        <input type="file" id="fileInput" accept=".pdf,.mp4,.mov">
-        <button onclick="uploadFile('sap', 'customer_contact')">Upload</button>
-    </div>
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h2>Upload PDF or Video</h2>
+            <input type="file" id="fileInput" accept=".pdf,.mp4,.mov">
+            <button onclick="uploadFile('sap', 'customer_contact')">Upload</button>
+        </div>
 
-    <!-- List of Uploaded Files -->
-    <div class="file-list">
-        <h2>Uploaded Files</h2>
-        <ul id="fileList">
-            <!-- Files will be dynamically added here -->
-        </ul>
+        <!-- List of Uploaded Files -->
+        <div class="file-list">
+            <h2>Uploaded Files</h2>
+            <ul id="fileList">
+                <!-- Files will be dynamically added here -->
+            </ul>
+        </div>
     </div>
 
     <script>
