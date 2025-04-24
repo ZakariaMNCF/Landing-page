@@ -3,56 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procedure</title>
+    <title>Procedure | Logistic Training</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
         }
         .procedure-container {
             background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            position: relative;
+            overflow: hidden;
         }
-        .procedure-container h1 {
+        .procedure-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #28a745, #007bff);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
-            font-size: 24px;
         }
-        .procedure-container ul {
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #e0e0e0;
+        }
+        .procedure-header {
+            margin: 0;
+            font-size: 22px;
+            color: #333;
+            font-weight: 600;
+        }
+        .procedure-quote {
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .procedure-menu {
             list-style-type: none;
             padding: 0;
+            margin: 25px 0;
         }
-        .procedure-container ul li {
-            margin: 10px 0;
+        .procedure-menu li {
+            margin: 15px 0;
+            transition: transform 0.2s;
         }
-        .procedure-container ul li a {
+        .procedure-menu li:hover {
+            transform: translateX(5px);
+        }
+        .procedure-menu a {
+            display: block;
+            padding: 12px 20px;
             text-decoration: none;
-            color: #28a745;
-            font-size: 18px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            transition: all 0.3s;
+            border-left: 4px solid #28a745;
         }
-        .procedure-container ul li a:hover {
+        .procedure-menu a:hover {
+            background-color: #e9ecef;
+            color: #28a745;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="procedure-container">
-        <h1>Procedure</h1>
-        <p>KHOWLEDGE IS THE ONLY WEALTH THAT GROWS WHEN SHARED.</p>
-        <ul>
-            <li><a href="#">Customer contact</a></li>
+        <div class="logo-container">
+            <!-- Consistent logo placement -->
+            <img src="your-logo-image.png" alt="Company Logo" class="logo-img">
+            <h1 class="procedure-header">PROCEDURE</h1>
+        </div>
+        
+        <p class="procedure-quote">KNOWLEDGE IS THE ONLY WEALTH THAT GROWS WHEN SHARED.</p>
+        
+        <ul class="procedure-menu">
+            <li><a href="#">Customer Contact</a></li>
             <li><a href="#">Procurement</a></li>
             <li><a href="#">Purchasing</a></li>
             <li><a href="#">Reception</a></li>
             <li><a href="#">Expedition</a></li>
         </ul>
+        
+        <a href="login.html" class="back-link">← Back to Login</a>
+        
+        <div class="footer">© 2023 Logistic Training. All rights reserved.</div>
     </div>
 </body>
 </html>
