@@ -6,57 +6,115 @@
     <title>Logistic Training Session - Login</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
         }
         .login-container {
             background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            position: relative;
+            overflow: hidden;
         }
-        .login-container h1 {
-            margin-bottom: 20px;
-            font-size: 24px;
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #28a745, #007bff);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #e0e0e0;
+        }
+        .login-header {
+            margin: 0;
+            font-size: 22px;
+            color: #333;
+            font-weight: 600;
         }
         .login-container input {
-            width: 100%;
-            padding: 10px;
+            width: 91%;
+            padding: 12px 15px;
             margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+        .login-container input:focus {
+            border-color: #28a745;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
         }
         .login-container button {
-            padding: 10px 20px;
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
             background-color: #28a745;
             color: #fff;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.2s;
         }
         .login-container button:hover {
             background-color: #218838;
+            transform: translateY(-2px);
+        }
+        .login-container button:active {
+            transform: translateY(0);
         }
         .quote {
             margin-top: 20px;
             font-style: italic;
-            color: #555;
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h1>LOGISTIC TRAINING SESSION</h1>
-        <input type="text" id="username" placeholder="User">
+        <div class="logo-container">
+            <!-- Replace src with your actual image path -->
+            <img src="your-logo-image.png" alt="Company Logo" class="logo-img">
+            <h1 class="login-header">LOGISTIC TRAINING</h1>
+        </div>
+        <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
-        <button onclick="document.location= 'https://zakariamncf.github.io/Landing-page/Landing-page.html'">Enter</button>
-        <p class="quote">KNOWLEDGE IS THE ONLY WEALTH THAT GROWS WHEN SHARED.</p>
+        <button onclick="document.location= 'https://zakariamncf.github.io/Landing-page/Landing-page.html'">Login</button>
+        <p class="quote">"Knowledge is the only wealth that grows when shared."</p>
+        <div class="footer">© 2023 Logistic Training. All rights reserved.</div>
     </div>
 
     <script>
